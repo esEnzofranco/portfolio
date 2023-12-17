@@ -1,0 +1,58 @@
+.mysql-main {
+    position: relative;
+}
+.mysql {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding: 10px;
+    align-items: flex-end;
+    width: 60px;
+}
+.protector {
+    width: 50px;
+    height: 100px;
+    z-index: 2;
+    position: absolute;
+    bottom: 0;
+    right: -45px;
+}
+.mysql p {
+    font-family: 'Nova Square', sans-serif;
+    color: rgb(36, 36, 36);
+}
+.mysql-img {
+    width: 75px;
+    height: 45px;
+    position: absolute;
+    opacity: 0;
+    bottom: 38px;
+    z-index: 1;
+}
+.mysql-appear {
+    animation: appear 1s ease forwards;
+}
+.mysql-disappear {
+    animation: disappear 1s ease forwards;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+        left: -50px;
+    }
+    100% {
+        opacity: 1;
+        left: 0;
+    }
+}
+@keyframes disappear {
+    0% {
+        opacity: 1;
+        left: 0px;
+    }
+    100% {
+        opacity: 0;
+        left: 50px;
+    }
+}

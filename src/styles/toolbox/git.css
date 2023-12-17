@@ -1,0 +1,98 @@
+.git-container {
+    display: flex;
+    font-family: 'Nova Square', sans-serif;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 10px
+}
+.git-container p {
+    font-family: 'Nova Square', sans-serif;
+    color: rgb(36, 36, 36);
+}
+.img-container {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+}
+.git-img {
+    position: relative;
+    opacity: 0;
+}
+.git {
+    width: 47px;
+    height: auto;
+}
+.github {
+    width: 42px;
+    height: 42px;
+}
+.git-up {
+    animation: git-rise .2s ease forwards, git-up .2s ease forwards;
+}
+.github-up {
+    animation: git-rise .8s ease forwards, github-up .8s ease forwards;
+}
+.git-down {
+    animation: git-go-down .4s ease forwards, git-down .3s ease forwards;
+}
+.github-down {
+    animation: git-go-down .8s ease forwards, github-down .8s ease forwards;
+}
+
+@keyframes git-rise {
+    0% {
+        opacity: 0;
+        bottom:0
+    }
+    100% {
+        opacity: 1;
+        bottom:26px
+    }
+}
+@keyframes git-up {
+    0% {
+        right: 0;
+    }
+    100% {
+        right: 10px
+    }
+}
+@keyframes github-up {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: 10px
+    }
+}
+
+@keyframes git-go-down {
+    0% {
+        bottom: 26px;
+        opacity: 1
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        bottom: 0;
+        opacity: 0
+    }
+}
+
+@keyframes git-down {
+    0% {
+        right: 10px;
+    }
+    100% {
+        right: 0
+    }
+}
+@keyframes github-down {
+    0% {
+        left: 10px;
+    }
+    100% {
+        left: 0;
+    }
+}

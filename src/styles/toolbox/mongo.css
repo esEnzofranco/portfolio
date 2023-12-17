@@ -1,0 +1,45 @@
+.mongo {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    z-index: 3;
+    position: relative;
+}
+.mongo p {
+    font-family: 'Nova Square', sans-serif;
+    color: rgb(36, 36, 36);
+}
+.mongo-img {
+    width: 110px;
+    position: absolute;
+    bottom: 40px;
+    opacity: 0;
+}
+.mongo-appear {
+    animation: mongo-appear .8s ease forwards;
+}
+.mongo-disappear {
+    animation: mongo-disappear .8s ease forwards;
+}
+
+@keyframes mongo-appear {
+    0% {
+        opacity: 0;
+        width: 400px
+    }
+    100% {
+        opacity: 1;
+        width: 110px;
+    }
+}
+@keyframes mongo-disappear {
+    0% {
+        opacity: 1;
+        width: 110px
+    }
+    100% {
+        opacity: 0;
+        width: 0px;
+    }
+}

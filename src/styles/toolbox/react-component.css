@@ -1,0 +1,75 @@
+#react {
+    padding: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.react-img {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    opacity: 0;
+}
+.riseAndSpin {
+    animation: rotate 2.3s linear infinite, 
+    rise .8s ease forwards, 
+    opacityOn .3s ease forwards;
+    opacity: 1;
+}
+.getOff {
+  animation: getOff 1s ease forwards, 
+  rotate 2.3s linear infinite,
+  opacityOff 1s ease forwards;
+}
+#react p {
+    font-family: 'Nova Square', sans-serif;
+    color: rgb(36, 36, 36);
+}
+
+@keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes rise {
+    from {
+      bottom: 0;
+    }
+    to {
+      bottom: 40px;
+    }
+  }
+
+  @keyframes getOff {
+    from {
+      bottom: 40px
+    }
+    to {
+      bottom: 0;
+    }
+  }
+
+  @keyframes opacityOn {
+    0% {
+      opacity: 0
+    }
+    15% {
+      opacity: 0
+    }
+    100% {
+      bottom: 1;
+    }
+  }
+  @keyframes opacityOff {
+    0% {
+      opacity: 1
+    }
+    100% {
+      opacity: 0
+    }
+  }
